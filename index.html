@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cricket Live Blog | Dubai Capitals vs Desert Vipers</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: #f1f3f6;
+  font-family: Arial, sans-serif;
+  color: #222;
+}
+header {
+  background: #101d35;
+  color: white;
+  padding: 22px 15px;
+  text-align: center;
+}
+.live {
+  color: #ff5252;
+  font-weight: bold;
+}
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 12px;
+}
+.scoreboard {
+  background: #172d50;
+  color: white;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+}
+.teams {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+}
+.team {
+  font-size: 19px;
+  font-weight: bold;
+}
+.score {
+  font-size: 34px;
+  font-weight: bold;
+  margin: 12px;
+}
+.status {
+  background: #e8f5e9;
+  padding: 12px;
+  margin-top: 15px;
+  border-radius: 8px;
+  color: #176b35;
+  text-align: center;
+}
+.section {
+  background: white;
+  padding: 20px;
+  margin-top: 18px;
+  border-radius: 10px;
+}
+.update {
+  border-left: 4px solid #e53935;
+  padding: 12px;
+  margin: 15px 0;
+  background: #f8f9fb;
+}
+.time {
+  color: #777;
+  font-size: 13px;
+}
+footer {
+  text-align: center;
+  background: #101d35;
+  color: white;
+  padding: 20px;
+  margin-top: 30px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>🏏 CRICKET LIVE BLOG</h1>
+  <p>Dubai Capitals vs Desert Vipers</p>
+  <span class="live">● LIVE MATCH COVERAGE</span>
+</header>
+
+<div class="container">
+
+  <div class="scoreboard">
+    <h2>INTERNATIONAL LEAGUE T20</h2>
+
+    <div class="teams">
+      <div class="team">Dubai Capitals</div>
+      <div>VS</div>
+      <div class="team">Desert Vipers</div>
+    </div>
+
+    <div class="score" id="score">Yet to start</div>
+    <p id="overs">Overs: --</p>
+    <p id="innings">Match not started</p>
+  </div>
+
+  <div class="status">
+    Match: 25 November 2026 |
+    Venue: Dubai International Cricket Stadium
+  </div>
+
+  <div class="section">
+    <h2>📰 Latest Cricket Updates</h2>
+    <div id="updates">
+
+      <div class="update">
+        <span class="time">Pre-match update</span>
+        <h3>Welcome to our live cricket blog!</h3>
+        <p>
+          Follow Dubai Capitals vs Desert Vipers
+          for match news, key moments, wickets,
+          boundaries and expert analysis.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>📊 Match Information</h2>
+    <p><b>Tournament:</b> ILT20 2026</p>
+    <p><b>Date:</b> 25 November 2026</p>
+    <p><b>Venue:</b> Dubai International Cricket Stadium</p>
+    <p><b>Format:</b> T20</p>
+  </div>
+
+  <div class="section">
+    <h2>⚡ Ball-by-Ball Commentary</h2>
+    <div id="commentary">
+      <p>Commentary will appear here when added by the editor.</p>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>Cricket Live Blog © 2026</p>
+  <p>All the latest cricket action in one place.</p>
+</footer>
+
+<script>
+// Add a new live blog update
+function addUpdate(title, message) {
+  const updates = document.getElementById("updates");
+  const item = document.createElement("div");
+
+  item.className = "update";
+  item.innerHTML = `
+    <span class="time">${new Date().toLocaleTimeString()}</span>
+    <h3></h3>
+    <p></p>
+  `;
+
+  item.querySelector("h3").textContent = title;
+  item.querySelector("p").textContent = message;
+
+  updates.prepend(item);
+}
+
+// Add ball-by-ball commentary
+function addCommentary(message) {
+  const commentary = document.getElementById("commentary");
+  const item = document.createElement("p");
+  item.textContent = message;
+  commentary.prepend(item);
+}
+
+// Example editor updates:
+// addUpdate("Toss Update", "Toss result goes here.");
+// addCommentary("0.1 - First ball of the innings.");
+</script>
+
+</body>
+</html>
